@@ -54,17 +54,27 @@
 }
 </style>
 <script lang="ts" setup>
+/**
+ * We modify the head for the current page
+ */
 useHead({
+  //The content is in english so we set the lang to en
   htmlAttrs: {
     lang: "en"
   },
+  // the title show in the address bar
   title: "Forecast 7",
+  // A description for SEO
   meta: [
     {
       name: "description",
       content: "The 7 day forecast of Paris!"
     }
   ],
+  /**
+   * We add font we need here
+   * that we get from google font
+   */
   link: [
     {
       rel: "preconnect",
@@ -82,11 +92,20 @@ useHead({
   ]
 });
 
+/**
+ * Min and max value use to filter the list of forecast
+ */
 const min = ref(0); 
 const max = ref(30);
 
+/**
+ * A list of the next forecast for 7 days
+ */
 const { data: forecast7 } = await useWeatherApi();
 
+/**
+ * The filtered list of forecast
+ */
 const filteredForecast7 = computed(()=>{
     return forecast7.value?.filter(d => d.temp.min >= min.value && d.temp.max <= max.value);
 });
