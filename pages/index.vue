@@ -7,7 +7,9 @@
       <TempSlider :min="-20" :max="40" label="max temp" inputId="maxTemp" v-model="max"/>
     </section>
     <section class="forecast-list" role="contentinfo" aria-label="The forecast for 7 days filtered">
-      <DayForecastCard v-for="day in filteredForecast7" :key="day.dt" :forecast="day"/>
+      <TransitionGroup name="index-slide-show-up">
+        <DayForecastCard v-for="day in filteredForecast7" :key="day.dt" :forecast="day"/>
+      </TransitionGroup>
     </section>
   </main>
 </template>
@@ -52,6 +54,17 @@
     padding: 22px 0;
   }
 }
+// The animation entry for the list of forecast
+.index-slide-show-up-enter-active,
+.index-slide-show-up-leave-active {
+  transition: all 0.5s ease;
+}
+.index-slide-show-up-enter-from,
+.index-slide-show-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
 </style>
 <script lang="ts" setup>
 /**
