@@ -3,7 +3,7 @@
         <div class="temp-slider__label">
             <label :for="inputId">{{ label }}</label><span>{{ data }}°C</span>
         </div>
-        <div class="temp-slider__label">
+        <div class="temp-slider__input">
             <input type="range" :id="inputId" :name="inputId" :min="min" :max="max" step="0.5" v-model="data"/>
         </div>
     </div>
@@ -29,7 +29,7 @@
         font-weight: bold;
     }
 }
-.temp-slider__label {
+.temp-slider__input {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(18px);
     border-radius: 110px;
