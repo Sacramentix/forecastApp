@@ -55,19 +55,36 @@
     }
 }
 </style>
+
 <script lang="ts" setup>
 import type { WeatherDataDay } from '~~/composables/useWeatherApi';
 
 const { forecast } = defineProps<{
+    // The forecast for one day.
     forecast: WeatherDataDay
 }>();
 
+/**
+ * A Date object from the forecast timestamp that we will use to display date in the component
+ */
 const date = new Date(forecast.dt);
 
+/**
+ * The short name of the corresponding day of the week of the @date
+ * with the client language and timezone
+ */
 const dayOfWeek = new Intl.DateTimeFormat([], { weekday: "short"}).format(date);
 
+
+/**
+ * The day of the month with the client timezone
+ */
 const day = date.getDate();
 
+
+/**
+ * The complete name of the month with the client language and timezone
+ */
 const month = new Intl.DateTimeFormat([], { month: "long"}).format(date);
 
 const datetime = date.toISOString();
