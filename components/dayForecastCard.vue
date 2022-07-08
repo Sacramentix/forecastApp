@@ -1,6 +1,6 @@
 <template>
     <div class="day-forecast-card">
-        <img :src="`http://openweathermap.org/img/wn/${forecast.icon}@2x.png`" alt="Weather icon" width="100" height="100">
+        <img :src="`https://openweathermap.org/img/wn/${forecast.icon}@2x.png`" alt="Weather icon" width="100" height="100">
         <time :datetime="datetime" class="day-forecast-card__time">
             <span>{{ dayOfWeek }}</span>
             <span>{{ day }}</span>
