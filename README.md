@@ -4,6 +4,15 @@ This is the repo of a website that show 7 day forecast for paris
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c1875037-f8e8-425b-abd8-fb302eb45a44/deploy-status)](https://app.netlify.com/sites/7dayforecastparis/deploys)
 
+## 🏔️ Lighthouse
+
+<p align="center">
+	<a href="https://htmlpreview.github.io/?https://github.com/Sacramentix/forecastApp/blob/master/.github/lighthouse_results/desktop/7dayforecastparis_netlify_app.html" title="Click to see full detail">
+		<img src=".github/lighthouse_results/desktop/pagespeed.svg">
+	</a>
+ 
+</p>
+
 ## 🚀 Tech stack
 
 <p align="center">
