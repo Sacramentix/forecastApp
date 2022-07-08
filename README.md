@@ -2,6 +2,8 @@
 
 This is the repo of a website that show 7 day forecast for paris
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c1875037-f8e8-425b-abd8-fb302eb45a44/deploy-status)](https://app.netlify.com/sites/7dayforecastparis/deploys)
+
 ## 🚀 Tech stack
 
 <p align="center">
